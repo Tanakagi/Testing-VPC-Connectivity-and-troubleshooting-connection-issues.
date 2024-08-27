@@ -1,4 +1,4 @@
-# Task 5: Interacting with the Database
+# Task 5: Connecting to the Network Project Public Server.
 
 <b>In this task, I opened the web application running on my web server and configured it to use the database.</br>
 
