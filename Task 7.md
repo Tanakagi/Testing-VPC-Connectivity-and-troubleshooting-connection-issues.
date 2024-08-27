@@ -25,6 +25,9 @@
 
 ## End of project.
 
-This was the end of my project as I was able to successfully connect to my public server via SSH, as well as connect to the internet..</br>
+<b>This was the end of my project as I was able to successfully:</br>
+<b>• Create a VPC and secure it using network ACLs and Security groups,</br>
+<b>• Launch 2 EC2 instances in a private and public subnet that could communicate with each other,</br>
+<b>• Successfully troubleshoot connectivity issues and connect to the internet via my public server.</br>
 </br>
 </br>
