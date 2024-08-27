@@ -1,4 +1,4 @@
-# Task 7: Interacting with the Database
+# Task 7: Testing VPC connectivity with the internet.
 
 <b>In this task, I opened the web application running on my web server and configured it to use the database.</br>
 
