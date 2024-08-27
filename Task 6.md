@@ -1,38 +1,69 @@
-# Task 6: Interacting with the Database
+# Task 6: Testing connectivity between my EC2 instances
 
-<b>In this task, I opened the web application running on my web server and configured it to use the database.</br>
-
-<b>• I opened a new web browser tab and typed the WebServer IP address.</br>
-<b>• At the top of the web application page, I clicked the RDS link.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2021.png" height="80%" width="80%" />
-</br>
-</br>
-
-<b>• I then configured the application to connect to my database.</br>
-<b>• filled in the following lab_db information in the open fields, and clicked submit</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2022.png" height="80%" width="80%" />
+<b>• I went back to the C2 console in a new tab.</br>
+<b>• Selected Network Project Private Server.</br>
+<b>• and copied my private server's Private IPv4 address. 10.0.1.170:</br>
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 
-<b>A message  appeared explaining that the application is running a command to copy information to the database.</br>
-<b>After a few seconds, the application displayed an Address Book.</br>
-<b>The Address Book application uses the RDS database to store information.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2023.png" height="80%" width="80%" />
+<b>• I Switched back to the EC2 Instance Connect tab.</br>
+<b>• and used the ping command to test connectivity by pinging my Private server.</br>
+<b>•I didn't get any replies, which tells me that there was a problem with the connection.</br>
+<b>My private server was probably blocking ICMP (Internet Control Message Protocol) traffic which is usually blocked by default.</br>
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 
-<b>• I then tested the web application by adding, editing and removing contacts.</br>
-<b>The data was persisted to the database and  automatically replicated to the second Availability Zone.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2024.png" height="80%" width="80%" />
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2025.png" height="80%" width="80%" />
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2026.png" height="80%" width="80%" />
-</br>
+### To resolve this connectivity error, I investigate whether the Network Project Private Server is allowing ICMP traffic.
+
+<b>• I select Network Project Private Subnet.</br>
+<b>• I investigated the Route tables and Network ACL tabs of my private subnet.</br>
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 
-## End of project.
 
-This was the end of my project as I was able to successfully Build a Database Server and Interact with my DB Using the web App.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/a9e8bfa36262a9c87e1b7d2144ce3364351a29e8/Project%20Images/Image%202.png" height="80%" width="80%" />
+<b>The Network ACL tab indicated that all traffic inbound and outbound are denied.</br> 
+<b>This means even if the route table correctly directs the ping to the Network Project Private Server, the network ACL is checking the ping traffic at the entrance of the private subnet.</br>
+<b>If it finds that ICMP traffic is not allowed, it stops the ping there.</br>
 </br>
 </br>
+
+<b>• I resolved this by adding a new rule to let my Public Server ping my Private Server under Edit inbound rules under the NACL.</br>
+<img src="" height="80%" width="80%" />
+</br>
+</br>
+
+<b>• I did the same for my outbound rules of the NACL.</br>
+<img src="" height="80%" width="80%" />
+</br>
+</br>
+
+<b>• I then checked my Security group to see if they allow for ICMP - IPv4.</br>
+<b>• I then discovered that both inbound and outbound rules did not.</br>
+<img src="" height="80%" width="80%" />
+</br>
+</br>
+
+<b>• I then added a rule for both inbound and outbound traffic to allow for ICMP - IPv4.</br>
+<img src="" height="80%" width="80%" />
+</br>
+</br>
+
+<b>• After adding the rules I went back to the EC2 Instance Connect tab that connected to my Public Server.</br>
+<b>• The multiple new lines appearing in your terminal were a sign of successful communication between the two EC2 instances.</br>
+<img src="" height="80%" width="80%" />
+</br>
+</br>
+
+
+
+
+
+
+
+
+
+
+
