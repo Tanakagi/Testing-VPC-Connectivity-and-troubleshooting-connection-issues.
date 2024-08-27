@@ -1,6 +1,6 @@
 # Testing-VPC-Connectivity-and-troubleshooting-connection-issues.
 
-In this project, I created a secure VPC where I launched 2 EC2 instances in a private and public subnet. I then tested connectivity and troubleshoot issues with connectivity using the EC3 instances.
+In this project, I created a secure VPC where I launched 2 EC2 instances in a private and public subnet. I then tested connectivity and troubleshoot issues with connectivity using the EC2 instances.
 
 ## AWS services used:
 <b> **• Amazon VPC and subnets** - used to create a network.</br>
