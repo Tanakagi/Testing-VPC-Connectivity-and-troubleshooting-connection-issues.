@@ -12,15 +12,15 @@
 <b>• I made sure the Number of public subnets chosen is 1.</br>
 <b>• I made sure the Number of private subnets chosen is also 1.</br>
 <b>• Updated my public and private subnets' CIDR blocks:</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%206.png" height="80%" width="80%" />
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 
 <b>• For the VPC endpoints option, I select None.</br>
 <b>• I Left the DNS options checked.</br>
 <b>• I Then Created VPC.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%207.png" height="80%" width="80%" />
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%208.png" height="80%" width="80%" />
+<img src="" height="80%" width="80%" />
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 
