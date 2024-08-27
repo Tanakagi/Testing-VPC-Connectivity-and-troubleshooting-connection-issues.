@@ -1,38 +1,67 @@
 # Task 5: Connecting to the Network Project Public Server.
 
-<b>In this task, I opened the web application running on my web server and configured it to use the database.</br>
-
-<b>• I opened a new web browser tab and typed the WebServer IP address.</br>
-<b>• At the top of the web application page, I clicked the RDS link.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2021.png" height="80%" width="80%" />
+<b>• I Selected Connect on the Network Project Public Server.</br>
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 
-<b>• I then configured the application to connect to my database.</br>
-<b>• filled in the following lab_db information in the open fields, and clicked submit</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2022.png" height="80%" width="80%" />
+<b>• and Kept all of the default settings.</br>
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 
-<b>A message  appeared explaining that the application is running a command to copy information to the database.</br>
-<b>After a few seconds, the application displayed an Address Book.</br>
-<b>The Address Book application uses the RDS database to store information.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2023.png" height="80%" width="80%" />
+<b> I then got this error message which indicated the connection failed.</br>
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 
-<b>• I then tested the web application by adding, editing and removing contacts.</br>
-<b>The data was persisted to the database and  automatically replicated to the second Availability Zone.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2024.png" height="80%" width="80%" />
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2025.png" height="80%" width="80%" />
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/d3b57ae35e2d318a422551e87a883b9f2bed0c4a/Project%20Images/Image%2026.png" height="80%" width="80%" />
+## I then investigated what happened, first I read the error message and went to reviewing my security settings.
+
+<b> I started Investigating the Route table and Network ACL tabs, to see if any rules were the cause of the error message. Everything seemed fine to me, my Network ACL allows all traffic in and out, and the route table is correctly setting up a route to the Internet Gateway.</br>
+<img src="" height="80%" width="80%" />
+<img src="" height="80%" width="80%" />
+</br>
+</br>
+
+<b>• I went to the Security Groups page to investigate further.</br>
+<b>• I selected the checkbox next to Network Project Public Security Group.</br>
+<b>• Selected the Inbound rules tab.</br>
+<b>• I noticed that no rule allowed SSH inbound traffic.</br>
+<img src="" height="80%" width="80%" />
 </br>
 </br>
 </br>
 
-## End of project.
 
-This was the end of my project as I was able to successfully Build a Database Server and Interact with my DB Using the web App.</br>
-<img src="https://github.com/Tanakagi/Building-a-Database-Server-and-Using-a-Web-App-to-Interacting-with-it./blob/a9e8bfa36262a9c87e1b7d2144ce3364351a29e8/Project%20Images/Image%202.png" height="80%" width="80%" />
+<b>• So to fix the issue I will update the  Network Project Public Server's security group so it can let in SSH traffic. Choosing Anywhere-IPv4 as the source lets in SSH connections from any IPv4 address. I then Saved the rules.</br>
+
+<b>•If this was a long-term project, we'd search for the specific CIDR block of IP addresses that EC2 Instance Connect uses and restrict inbound SSH traffic to that range instead of using *any IPv4 address.</br>
+<img src="" height="80%" width="80%" />
+</br>
+</br>
+
+<b>• With that modification, I refreshed my EC2 console's Instances page.</br>
+<b>• Selected my Public Server and Connected again.</br>
+<b>• I was now able to successfully connect. This allows me to directly access an ec2 instance using the Amazon console we no longer need to manage key pairs or use an SSH client to get access.</br>
+<img src="" height="80%" width="80%" />
+</br>
+</br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</br>
+
+<b>• and Kept all of the default settings.</br>
+<img src="" height="80%" width="80%" />
 </br>
 </br>
