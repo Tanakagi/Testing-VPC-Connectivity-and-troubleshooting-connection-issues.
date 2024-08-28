@@ -13,7 +13,7 @@ In this project, I created a secure VPC where I launched 2 EC2 instances in a pr
 </br>
 
 <b>**Project infrastructure**</br>
-<img src="" height="60%" width="60%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/1bf371dd2bb2bd596112ee954fd4f459b021850d/Project%20Images/image%2042.png" height="60%" width="60%" />
 
 # Project walk-through:
 
