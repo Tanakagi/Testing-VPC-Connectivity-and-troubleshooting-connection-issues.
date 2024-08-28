@@ -26,16 +26,10 @@
 </br>
 
 
-<b>• Under Instance configuration, I configured the following for the DB instance class:</br>
-<b>• Under Storage, I configured the following:</br>
-<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/af8aad86c9f942232d4f03eb0d1e40b956face0f/Project%20Images/image14.png" height="80%" width="80%" />
-</br>
-</br>
-
 ## Security groups configuration.
 <b>• Under the Inbound rules panel, I Added the following rules.:</br>
 <b>• and  Created the security group</br>
-<img src="" height="80%" width="80%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/9766a4a35e5d4b5d0e13206647ef4fa6b175e334/Project%20Images/image14.png" height="80%" width="80%" />
 </br>
 </br>
 
