@@ -29,5 +29,6 @@
 <b>• Create a VPC and secure it using network ACLs and Security groups,</br>
 <b>• Launch 2 EC2 instances in a private and public subnet that could communicate with each other,</br>
 <b>• Successfully troubleshoot connectivity issues and connect to the internet via my public server.</br>
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/bac9dd4ecd5db0e985df24fc845e6ada23972b87/Project%20Images/image%2042.png" height="80%" width="80%" />
 </br>
 </br>
