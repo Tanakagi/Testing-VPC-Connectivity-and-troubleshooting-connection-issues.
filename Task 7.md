@@ -3,22 +3,22 @@
 <b>I entered a curl command to test the public servers' connectivity with the internet.</br>
 <b>•This output confirms that my Public Sever instance can talk with the internet.</br>
 <b>• Tand that my Public Subnet, internet gateway and security settings were set up properly.</br>
-<img src="" height="80%" width="80%" />
-<img src="" height="80%" width="80%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/a1906abceaea15b0cb0a9454d9fcf6137cbd2e40/Project%20Images/image37.png" height="80%" width="80%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/a1906abceaea15b0cb0a9454d9fcf6137cbd2e40/Project%20Images/image38.png" height="80%" width="80%" />
 </br>
 </br>
 
 <b>• I then ran a different curl command this command sends an HTTP request to the server that hosts the website.</br>
 <b>• The output indicates that the website at the URL I entered has moved to a new URL.</br>
-<img src="" height="80%" width="80%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/a1906abceaea15b0cb0a9454d9fcf6137cbd2e40/Project%20Images/image39.png" height="80%" width="80%" />
 </br>
 </br>
 
 <b>• I then ran the curl with the URL that my terminal returned.</br>
 <b>• The curl has fetched the complete HTML content of NextWork's web app.</br>
 <b>• Iand indicates that the public server has successfully connected to the internet.</br>
-<img src="" height="80%" width="80%" />
-<img src="" height="80%" width="80%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/a1906abceaea15b0cb0a9454d9fcf6137cbd2e40/Project%20Images/image40.png" height="80%" width="80%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/a1906abceaea15b0cb0a9454d9fcf6137cbd2e40/Project%20Images/image41.png" height="80%" width="80%" />
 </br>
 </br>
 
