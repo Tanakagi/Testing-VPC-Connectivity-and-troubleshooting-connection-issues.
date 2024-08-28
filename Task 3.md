@@ -12,12 +12,12 @@
 <b>• I selected my existing security group.</br>
 <b>• I selected Network Project Public Security Group.</br>
 <b>• I then successfully launched my Instance</br>
-<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/8e3dac78a19435bed2f7f7b329fba4cefdf99d28/Project%20Images/image17.png" height="80%" width="80%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/8e3dac78a19435bed2f7f7b329fba4cefdf99d28/Project%20Images/image17.png" height="60%" width="6%" />
 <img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/8e3dac78a19435bed2f7f7b329fba4cefdf99d28/Project%20Images/image18.png" height="80%" width="80%" />
 </br>
 </br>
 
 <b>• I then reviewed the instance to make sure it was configured correctly.</br>
-<img src="" height="80%" width="80%" />
+<img src="https://github.com/Tanakagi/Testing-VPC-Connectivity-and-troubleshooting-connection-issues./blob/165e8eee56f49a7b1444d9beb6e8cb72f755342b/Project%20Images/image19.png" height="80%" width="80%" />
 </br>
 </br>
